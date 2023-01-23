@@ -1,0 +1,323 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background-color: #2E2E2E;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
+.header, .cont-menu, #video-fondo-2{
+    display: none;
+}
+
+.inicio{
+    width: 100%;
+    height: auto;
+}
+  
+#video-fondo-1{
+    width: 100%;
+}
+
+.yo{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+#yo-img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.info-mia{
+    width: 40%;
+    margin: 50px;
+}
+
+.info-mia h2{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.info-mia p{
+    color: white;
+    font-size: 20px;
+}
+
+.videos-de-serie{
+    width: 100%;
+    height: auto;
+}
+
+.Seccion{
+    display: flex;
+    justify-content: center;
+}
+
+.video{
+    margin: 100px;
+}
+
+.videos-de-serie .Seccion .video{
+    width: 40%;
+    height: auto;
+}
+
+.videos-de-serie .Seccion .video img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.videos-de-serie .Seccion .video h2{
+    color: white;
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+.videos-de-serie .Seccion .video button{
+    border: none;
+    padding: 15px 35px;
+    border-radius: 10px;
+    margin-top: 25px;
+    font-size: 17px;
+}
+
+.discord{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+.discord iframe{
+    margin: 50px 0px 100px 100px;
+}
+
+
+/* Css Para Responsive */ 
+
+
+@media only screen and (max-width: 1300px) {    
+    .video{
+        margin: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 1076px) {
+}
+
+@media only screen and (max-width: 992px) {
+    .discord{
+        display: flex;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .discord iframe{
+        margin: 50px;
+    }
+
+    header{
+        display: none;
+    }
+
+    #video-fondo-1{
+        display: none;
+    }
+    
+    #video-fondo-2{
+        display: unset;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .Seccion{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .video{
+        margin: 50px;
+    }
+
+    .videos-de-serie .Seccion .video{
+        width: 85%;
+        height: auto;
+    }
+
+    .videos-de-serie .Seccion .video button{
+        border: none;
+        padding: 15px 50px;
+        border-radius: 10px;
+        margin-top: 25px;
+        font-size: 17px;
+    }
+
+    .discord{
+        display: flex;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .discord iframe{
+        margin: 50px;
+    }
+
+    .yo{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 70px 0px 0px 0px;
+        text-align: center;
+    }
+    
+    #yo-img{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+    
+    .info-mia{
+        width: auto;
+        margin: 50px;
+    }
+    
+    .info-mia h2{
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+    
+    .info-mia p{
+        font-size: 22px;
+        text-align: center;
+    }
+
+
+        /* Css Para El Menú */ 
+
+
+    .header, .cont-menu{
+        display: unset;
+    }
+
+
+    .header{
+        display: flex;
+        position: sticky;
+        align-items: center;
+        justify-content: right;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 80px;
+        background: #1E1E1E;
+        box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
+        border: 1px solid rgba(0,0,0,.1);
+    }
+
+    .icono-menu{
+        z-index: 10;
+        padding-right: 20px;
+    }
+
+    .icono-menu img{
+        vertical-align: top;
+        width: 40px;
+    }
+
+    /* Estilos para el contenedor del Menú */
+    .cont-menu{
+        background-color: white;
+        box-shadow: 2px 0px 5px 2px rgb(66,66,66);
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        transition: all .5s ease;
+    }
+
+/* Estilos por agregar en JavaScript */
+.active{
+    transform: translate(-800px);
+}
+
+/* Estilos para el listado del Menú */
+.cont-menu nav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    list-style: none;
+}
+
+.opciones-cont-menu{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-menu nav a{
+    display: flex;
+    flex-direction: column;
+    color: #1E1E1E;
+    font-size: 35px;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+
+#icono-menu-salir{
+    margin: 20px;
+    width: 45px;
+}
+
+.iconos-redes-sociales{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconos-redes-sociales a img{
+    width: 30px;
+    margin: 0px 20px 0px 20px;
+}
+}
+
+@media only screen and (max-width: 576px) {
+    
+}
+
+@media only screen and (max-width: 360px) {
+    
+}
